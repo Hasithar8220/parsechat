@@ -9,6 +9,7 @@ class ChatService {
         this.GENERAL = new GeneralService();
     }
 
+    ///This method will accept string msg and return the splitted parts as a JSOn array
     async split(chat) {
 
         try {
@@ -22,6 +23,7 @@ class ChatService {
             let arr = this.GENERAL.lineseperator(chat.msg);
             let usecase = arr.length;
             
+            //If multiline call multiline formatter and singleliner otherwise
             out=(usecase > 1)?this.GENERAL.multilineformatter(arr):this.GENERAL.lineformatter(arr[0]);
 
             return out;

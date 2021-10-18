@@ -25,6 +25,7 @@ class GeneralService {
       let matches=this.patternmapper(line);    
       
       
+      
       matches.forEach(function(m){
       console.log(m);
       line = line.replace(m, '|');
@@ -38,6 +39,19 @@ class GeneralService {
         let chatObj={};
         chatObj.mention=matches[k];
         chatObj.sentence = sentences[k+1];
+        let temp=this.generalsplit(chatObj.mention);
+        chatObj.date=temp.date;
+        if(matches.length > 1){
+        if(this.isEven(k)){
+          chatObj.type='Customer';
+        }else{
+          chatObj.type='Agent';
+        }
+      }else{
+        chatObj.type = temp.type;
+      }
+        
+
         out.push(chatObj);  
       }
     
@@ -58,9 +72,21 @@ class GeneralService {
     if(!m){
       m = line.match(re1);
     }
-console.log(m);
+    console.log(m);
     return m;
     }
+
+    generalsplit(str){
+
+    let out={};  
+    out.date=str.substring(0, 8)
+    out.type=str.substring(8);
+    return out;
+    }
+
+     isEven(n) {
+      return n % 2 == 0;
+   }
 
    
 }
