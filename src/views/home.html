@@ -9,7 +9,7 @@
         </h1>
               
 
-        <ng-form name="Form">
+        <ng-form name="Form" class='form'>
 
                 <div class="form-group">
                         <label>Chat text</label>
@@ -19,11 +19,12 @@
                     </div>
 
             <div class="form-group">
-                <button class="btn-bg-z-primary btn-bg-z-primary-link margin-btn-header right" 
+                <button class='btn'
                 name="complete" type="button"
             ng-click="split()"> Split </button> 
             <br>
             <p>{{btnupdateTxt}}</p>
+            <p>{{result}}</p>
             </div>
                     </div>
             <!-- <button class="btn btn-primary" type="button" ng-click="addTeamMember(Form.$valid)">Send Request</button>
