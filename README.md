@@ -5,7 +5,15 @@ Simple string msg parser using regex pattern mapping.
 Chat agent name does not include special characters
 
 # How to run
-Download the repo and run "npm start"
+Download the repo and create ".env" file in root with below info.
+
+#PORT
+PORT=3005
+
+#ENV
+NODE_ENV=dev
+
+run "npm start"
 
 # How it works
 1) Accept the sring and check for # of lines
