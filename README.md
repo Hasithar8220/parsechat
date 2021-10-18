@@ -11,3 +11,8 @@ Download the repo and run "npm start"
 1) Accept the sring and check for # of lines
 2) If multiline, use multiline formatter or else call the single line formatter
 3) Construct the output and return as JSON array
+
+
+# Technologies
+  AngularJS simple UI and NodeJS backend
+  SPA
