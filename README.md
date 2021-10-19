@@ -13,7 +13,8 @@ PORT=3005
 #ENV
 NODE_ENV=dev
 
-run "npm start"
+1) npm install
+2) npm start
 
 # How it works
 1) Accept the sring and check for # of lines
@@ -22,5 +23,5 @@ run "npm start"
 
 
 # Technologies
-  AngularJS simple UI and NodeJS backend
+  AngularJS simple UI and NodeJS backend,
   SPA
